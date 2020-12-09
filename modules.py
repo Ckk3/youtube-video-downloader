@@ -3,7 +3,7 @@ from colorama import init, Fore, deinit
 
 init()
 
-video = YouTube('https://youtu.be/nvQJYOa_bWk')
+
 
 def showVideoInfo(url):
     print(Fore.WHITE, end='')
@@ -20,9 +20,9 @@ def downloadVideo(mp4=False):
     print('Choose a stream: ')
     cont = 0
     if mp4:
-        streamList = video.streams.filter(file_extension='mp4').all()
+        streamList = list(video.streams.filter(file_extension='mp4', type='video'))
     else:
-        streamList = video.streams.filter(type='video').all()
+        streamList = list(video.streams.filter(type='video'))
     for stream in streamList:
         cont += 1
         print(f'{cont}= {stream}')
@@ -48,7 +48,7 @@ def downloadAudio():
     print(Fore.GREEN, end='')
     print('Choose a stream: ')
     cont = 0
-    streamList = video.streams.filter(only_audio=True)
+    streamList = list(video.streams.filter(only_audio=True))
 
     for stream in streamList:
         cont += 1
