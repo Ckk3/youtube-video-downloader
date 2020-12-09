@@ -1,4 +1,3 @@
-from pytube import YouTube
 from colorama import init, Fore, deinit
 import modules
 
@@ -36,7 +35,7 @@ finally:
     elif option == 4:
         modules.downloadVideo(mp4=False)
 
-
+deinit()
 
 
 

@@ -1,9 +1,8 @@
 from pytube import YouTube
-from colorama import init, Fore, deinit
-from datetime import date, datetime
+from colorama import init, Fore
+from datetime import datetime
+
 init()
-
-
 
 def showVideoInfo(url):
     print(Fore.WHITE, end='')
