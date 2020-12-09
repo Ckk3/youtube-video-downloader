@@ -3,6 +3,7 @@ from colorama import init, Fore, deinit
 
 init()
 
+video = YouTube('https://youtu.be/nvQJYOa_bWk')
 
 def showVideoInfo(url):
     print(Fore.WHITE, end='')
@@ -14,18 +15,20 @@ def showVideoInfo(url):
     return video
 
 
-def downloadVideo():
+def downloadVideo(mp4=False):
     print(Fore.GREEN, end='')
     print('Choose a stream: ')
     cont = 0
-    streamList = video.streams.filter(file_extension='mp4').all()
+    if mp4:
+        streamList = video.streams.filter(file_extension='mp4').all()
+    else:
+        streamList = video.streams.filter(type='video').all()
     for stream in streamList:
         cont += 1
         print(f'{cont}= {stream}')
 
     try:
         option = int(input('Choose the stream that you want to download: '))
-
     except:
         print('Choose a valid option!')
         while True:
@@ -34,9 +37,40 @@ def downloadVideo():
                 print('Choose a valid option!')
             else:
                 break
-
     finally:
         stream = streamList[option - 1]
         print(Fore.YELLOW, end='')
         print(f'Downloading {stream}')
-        stream.download()
+        stream.download('/Users/gugam/Desktop')
+
+
+def downloadAudio():
+    print(Fore.GREEN, end='')
+    print('Choose a stream: ')
+    cont = 0
+    streamList = video.streams.filter(only_audio=True)
+
+    for stream in streamList:
+        cont += 1
+        print(f'{cont}= {stream}')
+
+    try:
+        option = int(input('Choose the stream that you want to download: '))
+    except:
+        print('Choose a valid option!')
+        while True:
+            option = int(input('->'))
+            if option > len(streamList):
+                print('Choose a valid option!')
+            else:
+                break
+    finally:
+        stream = streamList[option - 1]
+        print(Fore.YELLOW, end='')
+        print(f'Downloading {stream}')
+        stream.download('/Users/gugam/Desktop/')
+
+
+def thumbnailUrl():
+    print(Fore.YELLOW, end='')
+    print(f'Thumbnail Url: {video.thumbnail_url}')
