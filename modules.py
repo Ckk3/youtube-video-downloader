@@ -1,6 +1,6 @@
 from pytube import YouTube
 from colorama import init, Fore, deinit
-
+from datetime import date, datetime
 init()
 
 
@@ -11,7 +11,10 @@ def showVideoInfo(url):
     video = YouTube(url)
     print(f'Title: {video.title}')
     print(f'Author: {video.author}')
-    print(f'Published in: {video.publish_date}')
+    dateString = str(video.publish_date.date())
+    videoDate = datetime.strptime(dateString, '%Y-%m-%d').date()
+    dateFormated = videoDate.strftime('%d/%m/%Y')
+    print(f'Published in: {dateFormated}')
     return video
 
 
