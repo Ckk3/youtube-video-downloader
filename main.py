@@ -1,5 +1,6 @@
 from colorama import init, Fore, deinit
 import modules
+from os import system
 
 
 init()
@@ -35,7 +36,9 @@ finally:
     elif option == 4:
         modules.downloadVideo(mp4=False)
 
+print(Fore.RESET)
 deinit()
+system('pause')
 
 
 
