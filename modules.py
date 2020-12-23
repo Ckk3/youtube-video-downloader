@@ -1,6 +1,7 @@
 from pytube import YouTube
 from colorama import init, Fore
 from datetime import datetime
+import webbrowser
 
 init()
 
@@ -75,4 +76,6 @@ def downloadAudio():
 
 def thumbnailUrl():
     print(Fore.YELLOW, end='')
-    print(f'Thumbnail Url: {video.thumbnail_url}')
+    thumbUrl = video.thumbnail_url
+    print(f'Thumbnail Url: {thumbUrl}')
+    webbrowser.open(thumbUrl)
