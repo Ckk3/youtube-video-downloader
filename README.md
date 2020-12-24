@@ -14,12 +14,12 @@ python -m venv venv
 .\venv\scripts\activate.bat (if using cmd)
 .\venv\scripts\activate.ps1 (if using powersheel, remender to change de powersheel execution policy)
 ```
-#### Linux:
+##### Linux:
 ```
 .\venv\scripts\activate
 ```
 
-#### Install de requirements:
+#### Install requirements:
 ```
 pip install -r requirements.txt
 ```
@@ -39,12 +39,12 @@ python -m venv venv
 .\venv\scripts\activate.bat (Se estiver usando o cmd)
 .\venv\scripts\activate.ps1 (no powersheel, não esqueça de mudar a politica de execução do powersheel)
 ```
-#### Linux:
+##### Linux:
 ```
 .\venv\scripts\activate
 ```
 
-#### Instales os requisitos:
+#### Instale os requisitos:
 ```
 pip install -r requirements.txt
 ```
