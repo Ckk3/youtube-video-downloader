@@ -16,7 +16,7 @@ python -m venv venv
 ```
 ##### Linux:
 ```
-.\venv\scripts\activate
+source venv\scripts\activate
 ```
 
 #### Install requirements:
@@ -41,7 +41,7 @@ python -m venv venv
 ```
 ##### Linux:
 ```
-.\venv\scripts\activate
+source venv\scripts\activate
 ```
 
 #### Instale os requisitos:
