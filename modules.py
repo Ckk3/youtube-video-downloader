@@ -9,7 +9,7 @@ init()
 def showVideoInfo(url):
     '''
     Print the video info (Title, Publish Date, Author)
-    :param url: video url
+    @param url: video url
     '''
     print(Fore.WHITE, end='')
     global video
@@ -27,7 +27,7 @@ def showVideoInfo(url):
 def downloadVideo(mp4=False):
     '''
     List all the video download options avaliable and Download the selected option
-    :param mp4: If true, the function will list only the download option with mp4 format
+    @param mp4: If true, the function will list only the download option with mp4 format
     '''
     print(Fore.GREEN, end='')
     print('Choose a stream: ')
@@ -95,3 +95,5 @@ def thumbnailUrl():
     print(f'Thumbnail Url: {thumbUrl}')
     webbrowser.open(thumbUrl)
 
+
+    
