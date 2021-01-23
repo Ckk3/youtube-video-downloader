@@ -1,6 +1,6 @@
 colorama==0.4.4
 DateTime==4.3
-pytube==10.0.0
+pytube>=10.4.1
 pytz==2020.4
 typing-extensions==3.7.4.3
 zope.interface==5.2.0
