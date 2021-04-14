@@ -12,7 +12,7 @@ python -m venv venv
 ##### Windows:
 ```
 .\venv\scripts\activate.bat (if using cmd)
-.\venv\scripts\activate.ps1 (if using powersheel, remender to change de powersheel execution policy)
+.\venv\scripts\activate.ps1 (if using powersheel, remender to change powersheel execution policy)
 ```
 ##### Linux:
 ```
